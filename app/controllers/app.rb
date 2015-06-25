@@ -1,26 +1,15 @@
 class App < Sinatra::Base
   set :views, Proc.new { File.join(root, '../views')}
 
-  get '/' do  # INDEX
+  get '/' do
     @songs = Song.all
     erb :'songs/index'
   end
 
-  get '/songs/:id' do # SHOW
+  get '/songs/:id' do
     @song = Song.find(params[:id])
     erb :'songs/show'
   end
-
-  get '/songs/:id/edit' do  # EDIT
-    @song = Song.find(params[:id])
-    erb :'songs/edit'
-  end
-
-  post '/songs/:id' do # UPDATE
-    @song = Song.find(params[:id])
-    @song.update(params['song'])
-    erb :'songs/show'
-  end 
-
+  
 end
 
