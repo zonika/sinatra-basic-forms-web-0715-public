@@ -6,8 +6,8 @@ Fork this repository. Deliver your work in the master branch.
 
 ## Objectives
 
-1) Build out basic edit/update functionality for the songs resource
-2) Create a form that produces a well-structured params hash for updating songs using mass-assignment
+1. Build out basic edit/update functionality for the songs resource
+2. Create a form that produces a well-structured params hash for updating songs using mass-assignment
 
 ## Instructions
 
